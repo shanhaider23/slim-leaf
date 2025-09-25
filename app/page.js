@@ -56,7 +56,7 @@ export default function Home() {
                     priority
                   />
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse z-20">
-                    -65% OFF
+                    -33% OFF
                   </div>
                   <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-lg z-20">
                     ✨ Premium Quality
