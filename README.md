@@ -1,6 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SlimLeaf Tea - Premium Organic Weight Management Tea
 
-## Getting Started
+A modern, responsive Next.js website for SlimLeaf Tea, featuring premium organic tea products for natural wellness and weight management.
+
+## 🌿 About SlimLeaf Tea
+
+SlimLeaf Tea offers premium organic weight management tea made from 100% natural ingredients including:
+- Organic Ginger
+- Asian Ginseng
+- Turmeric Root
+- Ceylon Cinnamon
+- Black Pepper
+- Cumin Seeds
+- Green Coffee Extract
+- Dandelion Leaf
+- Premium Green Tea
+
+Each 130g pack provides 70-80 cups of delicious, health-focused tea.
+
+## 🚀 Features
+
+- **Modern Design**: Clean, professional UI with attractive gradients and animations
+- **Mobile Responsive**: Fully optimized for all devices and screen sizes
+- **Performance Optimized**: Built with Next.js for fast loading and excellent SEO
+- **Interactive Elements**: Smooth hover effects and user-friendly navigation
+- **Direct Ordering**: WhatsApp integration for easy customer orders
+- **Social Proof**: Customer testimonials and reviews section
+
+## 🛠️ Getting Started
 
 First, run the development server:
 
@@ -10,27 +36,35 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/app` - Next.js app router pages and layouts
+- `/components` - Reusable UI components
+- `/public` - Static assets including product images and icons
+- `/lib` - Utility functions and configurations
 
-## Learn More
+## 🎨 Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15** - React framework for production
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icon library
+- **Radix UI** - Accessible component primitives
+- **Class Variance Authority** - Utility for component variants
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Contact Information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Phone**: +92 321 5445474
+- **WhatsApp**: Available for direct orders
+- **Location**: Faisalabad, Pakistan
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is optimized for deployment on Vercel, Netlify, or any other modern hosting platform that supports Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+© 2025 SlimLeaf Tea. All rights reserved.

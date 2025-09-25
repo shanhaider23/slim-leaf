@@ -1,7 +1,10 @@
 {
-  "name": "slipleaf",
-  "version": "0.1.0",
+  "name": "slimleaf-tea",
+  "version": "1.0.0",
   "private": true,
+  "description": "Premium organic weight management tea website for SlimLeaf Tea",
+  "keywords": ["organic tea", "weight management", "herbal tea", "nextjs", "ecommerce"],
+  "author": "SlimLeaf Tea",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",

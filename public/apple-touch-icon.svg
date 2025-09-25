@@ -1,0 +1,11 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="white" rx="20"/>
+  <path d="M34 146c0-45 22.5-79 56.25-90 33.75 11 56.25 45 56.25 90-11.25-22.5-33.75-33.75-56.25-33.75s-45 11.25-56.25 33.75z" fill="url(#leafGradient)"/>
+  <path d="M90.25 56c0 33.75-16.875 56.25-33.75 67.5 5.625-22.5 11.25-45 33.75-67.5z" fill="#22c55e" opacity="0.6"/>
+</svg>

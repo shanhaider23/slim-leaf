@@ -1,0 +1,26 @@
+{
+  "name": "SlimLeaf Tea - Premium Organic Weight Management Tea",
+  "short_name": "SlimLeaf Tea",
+  "description": "Transform your wellness with SlimLeaf Tea. 100% organic ingredients for natural weight management.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "wellness", "food"],
+  "lang": "en-US"
+}
