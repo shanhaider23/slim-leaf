@@ -45,7 +45,7 @@ export default function Home() {
             {/* Product Image */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-center">
               <div className="relative group w-full max-w-md">
-                <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity -z-10"></div>
                 <div className="relative bg-green-100 rounded-3xl p-8 shadow-2xl w-full">
                   <Image
                     src="/slimleaf.png"
@@ -55,10 +55,10 @@ export default function Home() {
                     className="rounded-2xl shadow-lg w-full h-auto bg-green-300"
                     priority
                   />
-                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse">
+                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse z-20">
                     -65% OFF
                   </div>
-                  <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-lg">
+                  <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-lg z-20">
                     ✨ Premium Quality
                   </div>
                 </div>
@@ -115,25 +115,26 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center justify-center lg:justify-start space-x-4">
-                  <span className="text-2xl text-gray-400 line-through">Rs. 2,299</span>
-                  <span className="text-4xl lg:text-5xl font-bold text-green-600">Rs. 799</span>
+                  <span className="text-2xl text-gray-400 line-through">Rs. 2,999</span>
+                  <span className="text-4xl lg:text-5xl font-bold text-green-600">Rs. 1,999</span>
                   <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">
-                    Save Rs. 1,500
+                    Save Rs. 1,000
                   </span>
                 </div>
-                <p className="text-gray-600 mt-2">130g Premium Pack • 70-80 Servings</p>
+                <p className="text-gray-600 mt-2">125g Premium Pack • 70-80 Servings</p>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-10">
                 <Button
                   asChild
                   size="lg"
                   className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-6 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   <a
-                    href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea"
+                    href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea%20for%20Rs.%201999"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center"
                   >
                     <ShoppingCart className="mr-3 h-6 w-6" />
@@ -191,7 +192,7 @@ export default function Home() {
               {
                 icon: <Clock className="w-8 h-8 text-green-500" />,
                 title: "Long Lasting",
-                description: "Each 130g pack provides 70-80 cups of delicious tea"
+                description: "Each 125g pack provides 70-80 cups of delicious tea"
               },
               {
                 icon: <Users className="w-8 h-8 text-green-500" />,
@@ -372,7 +373,7 @@ export default function Home() {
               className="bg-white text-green-600 hover:bg-gray-100 px-10 py-6 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
               <a
-                href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea"
+                href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea%20for%20Rs.%201999"
                 target="_blank"
                 className="inline-flex items-center"
               >
@@ -382,8 +383,8 @@ export default function Home() {
             </Button>
 
             <div className="text-white">
-              <div className="text-3xl font-bold">Rs. 799</div>
-              <div className="text-green-200 line-through text-lg">Rs. 2,299</div>
+              <div className="text-3xl font-bold">Rs. 1,999</div>
+              <div className="text-green-200 line-through text-lg">Rs. 2,999</div>
             </div>
           </div>
         </div>
