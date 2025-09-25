@@ -46,13 +46,13 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-center">
               <div className="relative group w-full max-w-md">
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-2xl w-full">
+                <div className="relative bg-green-100 rounded-3xl p-8 shadow-2xl w-full">
                   <Image
                     src="/slimleaf.png"
                     alt="SlimLeaf Organic Tea"
                     width={400}
                     height={400}
-                    className="rounded-2xl shadow-lg w-full h-auto"
+                    className="rounded-2xl shadow-lg w-full h-auto bg-green-300"
                     priority
                   />
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse">
