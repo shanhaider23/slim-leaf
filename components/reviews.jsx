@@ -17,8 +17,8 @@ export default function Reviews({ reviews, feedbackLink }) {
             <MessageCircle className="h-4 w-4" aria-hidden="true" /> From our WhatsApp community
           </span>
           <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-5xl">Your words. Your experience.</h2>
-          <p className="text-lg text-gray-600">Read feedback shared by SlimLeaf customers. Open any screenshot to read the full conversation.</p>
-          <p className="mt-3 text-sm text-gray-500">{reviews.length ? `${reviews.length} customer conversations • Individual experiences; results vary.` : "Have tried SlimLeaf? Be the first to share your experience."}</p>
+          <p className="text-lg text-gray-600">Read feedback shared by SlimLeaf customers and browse our tea updates. Open any image to see it in full.</p>
+          <p className="mt-3 text-sm text-gray-500">{reviews.length ? `${reviews.filter((review) => review.type !== "poster").length} review screenshots • Individual experiences; results vary.` : "Have tried SlimLeaf? Be the first to share your experience."}</p>
         </div>
         <div id="review-gallery" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visibleReviews.map((review, index) => (
@@ -28,14 +28,14 @@ export default function Reviews({ reviews, feedbackLink }) {
                 <Image src={review.image} alt={review.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-3" />
               </div>
               <div className="flex items-center justify-between gap-3 border-t border-green-100 px-5 py-4">
-                <span className="font-medium text-gray-800">Customer feedback {index + 1}</span>
-                <span className="inline-flex items-center gap-1 text-sm text-green-700">Read full review <ArrowUpRight className="h-4 w-4" aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></span>
+                <span className="font-medium text-gray-800">{review.title || `Customer feedback ${index + 1}`}</span>
+                <span className="inline-flex shrink-0 items-center gap-1 text-sm text-green-700">{review.type === "poster" ? "View image" : "Read full review"} <ArrowUpRight className="h-4 w-4" aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></span>
               </div>
             </a>
           ))}
         </div>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          {reviews.length > 3 && <Button variant="outline" onClick={() => setShowAll(!showAll)} aria-expanded={showAll} aria-controls="review-gallery" className="border-green-200 text-green-800">{showAll ? "Show fewer reviews" : `View all ${reviews.length} reviews`}</Button>}
+          {reviews.length > 3 && <Button variant="outline" onClick={() => setShowAll(!showAll)} aria-expanded={showAll} aria-controls="review-gallery" className="border-green-200 text-green-800">{showAll ? "Show fewer images" : `View all ${reviews.length} images`}</Button>}
           <Button asChild className="bg-green-700 text-white hover:bg-green-800"><a href={feedbackLink} target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> Share your experience</a></Button>
         </div>
       </div>

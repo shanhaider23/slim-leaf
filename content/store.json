@@ -7,24 +7,144 @@
     "image": "/slimleaf.png"
   },
   "packages": [
-    { "id": "single", "quantity": 1, "label": "Try SlimLeaf", "featured": false },
-    { "id": "duo", "quantity": 2, "price": 4499, "label": "Share the routine", "featured": false },
-    { "id": "trio", "quantity": 3, "price": 5999, "label": "Best value", "featured": true }
+    {
+      "id": "single",
+      "quantity": 1,
+      "label": "Try SlimLeaf",
+      "featured": false
+    },
+    {
+      "id": "duo",
+      "quantity": 2,
+      "price": 4499,
+      "label": "Share the routine",
+      "featured": false
+    },
+    {
+      "id": "trio",
+      "quantity": 3,
+      "price": 5999,
+      "label": "Best value",
+      "featured": true
+    }
   ],
-  "packageBenefits": ["Free delivery", "Free diet plan"],
+  "packageBenefits": [
+    "Free delivery",
+    "Free diet plan"
+  ],
   "whatsappNumber": "923215445474",
   "reviews": [
-    { "id": "feedback-01", "image": "/WhatsApp Image 2026-11-15 at 14.12.27.jpeg", "alt": "Customer WhatsApp feedback about their SlimLeaf tea routine" },
-    { "id": "feedback-02", "image": "/WhatsApp Image 2026-11-15 at 14.12.56.jpeg", "alt": "Customer WhatsApp conversation sharing their SlimLeaf experience" },
-    { "id": "feedback-03", "image": "/WhatsApp Image 2026-11-15 at 14.13.22.jpeg", "alt": "Customer WhatsApp message reviewing SlimLeaf tea" },
-    { "id": "feedback-04", "image": "/WhatsApp Image 2026-11-15 at 14.14.02.jpeg", "alt": "Customer WhatsApp feedback after using SlimLeaf tea" },
-    { "id": "feedback-05", "image": "/WhatsApp Image 2026-11-15 at 14.14.59.jpeg", "alt": "Customer WhatsApp message about their daily tea routine" },
-    { "id": "feedback-06", "image": "/WhatsApp Image 2026-11-15 at 16.28.02.jpeg", "alt": "Customer WhatsApp conversation about their SlimLeaf routine" }
+    {
+      "id": "feedback-01",
+      "image": "/WhatsApp Image 2026-11-15 at 14.12.27.jpeg",
+      "alt": "Customer WhatsApp feedback about their SlimLeaf tea routine"
+    },
+    {
+      "id": "feedback-02",
+      "image": "/WhatsApp Image 2026-11-15 at 14.12.56.jpeg",
+      "alt": "Customer WhatsApp conversation sharing their SlimLeaf experience"
+    },
+    {
+      "id": "feedback-03",
+      "image": "/WhatsApp Image 2026-11-15 at 14.13.22.jpeg",
+      "alt": "Customer WhatsApp message reviewing SlimLeaf tea"
+    },
+    {
+      "id": "feedback-04",
+      "image": "/WhatsApp Image 2026-11-15 at 14.14.02.jpeg",
+      "alt": "Customer WhatsApp feedback after using SlimLeaf tea"
+    },
+    {
+      "id": "feedback-05",
+      "image": "/WhatsApp Image 2026-11-15 at 14.14.59.jpeg",
+      "alt": "Customer WhatsApp message about their daily tea routine"
+    },
+    {
+      "id": "feedback-06",
+      "image": "/WhatsApp Image 2026-11-15 at 16.28.02.jpeg",
+      "alt": "Customer WhatsApp conversation about their SlimLeaf routine"
+    },
+    {
+      "id": "feedback-07",
+      "image": "/WhatsApp Image 2026-11-15 at 14.12.36.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-08",
+      "image": "/WhatsApp Image 2026-11-15 at 14.15.32.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-09",
+      "image": "/WhatsApp Image 2026-11-15 at 16.26.52 (1).jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-10",
+      "image": "/WhatsApp Image 2026-11-15 at 16.26.52.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-11",
+      "image": "/WhatsApp Image 2026-11-15 at 16.28.50.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-12",
+      "image": "/WhatsApp Image 2026-11-15 at 16.30.32.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-13",
+      "image": "/WhatsApp Image 2026-11-15 at 16.31.20.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-14",
+      "image": "/WhatsApp Image 2026-11-15 at 16.38.07.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-15",
+      "image": "/WhatsApp Image 2026-11-15 at 16.38.38.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-16",
+      "image": "/WhatsApp Image 2026-11-15 at 16.39.26.jpeg",
+      "alt": "Customer WhatsApp feedback sharing their SlimLeaf tea experience"
+    },
+    {
+      "id": "feedback-17",
+      "image": "/WhatsApp Image 2026-11-15 at 16.40.23.jpeg",
+      "alt": "SlimLeaf package offers",
+      "type": "poster",
+      "title": "SlimLeaf package offers"
+    },
+    {
+      "id": "feedback-18",
+      "image": "/WhatsApp Image 2026-11-15 at 16.40.37.jpeg",
+      "alt": "SlimLeaf daily routine inspiration",
+      "type": "poster",
+      "title": "SlimLeaf daily routine inspiration"
+    }
   ],
   "faqs": [
-    { "question": "How much does SlimLeaf Tea cost?", "answer": "price" },
-    { "question": "How do I place an order?", "answer": "Tap Order via WhatsApp to send us a message. We will confirm your order, delivery details and total before you buy." },
-    { "question": "How can I share my review?", "answer": "Use the Share your experience button to send your feedback on WhatsApp. Tell us if you would like it featured on the website." },
-    { "question": "Will I get the same results as the reviews?", "answer": "Reviews describe individual experiences. Results vary and are not guaranteed." }
+    {
+      "question": "How much does SlimLeaf Tea cost?",
+      "answer": "price"
+    },
+    {
+      "question": "How do I place an order?",
+      "answer": "Tap Order via WhatsApp to send us a message. We will confirm your order, delivery details and total before you buy."
+    },
+    {
+      "question": "How can I share my review?",
+      "answer": "Use the Share your experience button to send your feedback on WhatsApp. Tell us if you would like it featured on the website."
+    },
+    {
+      "question": "Will I get the same results as the reviews?",
+      "answer": "Reviews describe individual experiences. Results vary and are not guaranteed."
+    }
   ]
 }
