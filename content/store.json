@@ -1,0 +1,30 @@
+{
+  "product": {
+    "name": "SlimLeaf Tea",
+    "price": 2499,
+    "compareAtPrice": 2999,
+    "packLabel": "125g Premium Pack • 70-80 Servings",
+    "image": "/slimleaf.png"
+  },
+  "packages": [
+    { "id": "single", "quantity": 1, "label": "Try SlimLeaf", "featured": false },
+    { "id": "duo", "quantity": 2, "price": 4499, "label": "Share the routine", "featured": false },
+    { "id": "trio", "quantity": 3, "price": 5999, "label": "Best value", "featured": true }
+  ],
+  "packageBenefits": ["Free delivery", "Free diet plan"],
+  "whatsappNumber": "923215445474",
+  "reviews": [
+    { "id": "feedback-01", "image": "/WhatsApp Image 2026-11-15 at 14.12.27.jpeg", "alt": "Customer WhatsApp feedback about their SlimLeaf tea routine" },
+    { "id": "feedback-02", "image": "/WhatsApp Image 2026-11-15 at 14.12.56.jpeg", "alt": "Customer WhatsApp conversation sharing their SlimLeaf experience" },
+    { "id": "feedback-03", "image": "/WhatsApp Image 2026-11-15 at 14.13.22.jpeg", "alt": "Customer WhatsApp message reviewing SlimLeaf tea" },
+    { "id": "feedback-04", "image": "/WhatsApp Image 2026-11-15 at 14.14.02.jpeg", "alt": "Customer WhatsApp feedback after using SlimLeaf tea" },
+    { "id": "feedback-05", "image": "/WhatsApp Image 2026-11-15 at 14.14.59.jpeg", "alt": "Customer WhatsApp message about their daily tea routine" },
+    { "id": "feedback-06", "image": "/WhatsApp Image 2026-11-15 at 16.28.02.jpeg", "alt": "Customer WhatsApp conversation about their SlimLeaf routine" }
+  ],
+  "faqs": [
+    { "question": "How much does SlimLeaf Tea cost?", "answer": "price" },
+    { "question": "How do I place an order?", "answer": "Tap Order via WhatsApp to send us a message. We will confirm your order, delivery details and total before you buy." },
+    { "question": "How can I share my review?", "answer": "Use the Share your experience button to send your feedback on WhatsApp. Tell us if you would like it featured on the website." },
+    { "question": "Will I get the same results as the reviews?", "answer": "Reviews describe individual experiences. Results vary and are not guaranteed." }
+  ]
+}

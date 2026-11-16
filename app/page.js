@@ -1,7 +1,11 @@
 import Image from "next/image";
-import { ShoppingCart, Phone, MapPin, Sparkles, Star, Shield, Award, Leaf, Clock, Users, MessageCircle, Menu } from "lucide-react";
+import { ShoppingCart, Phone, MapPin, Sparkles, Shield, Award, Leaf, Clock, Users, MessageCircle, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+import Reviews from "@/components/reviews";
+import Packages from "@/components/packages";
+import { store, formatPrice, packagePrice, savings, discountPercent, orderLink, whatsappLink } from "@/lib/store";
 
 export default function Home() {
   return (
@@ -22,23 +26,29 @@ export default function Home() {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a href="#benefits" className="text-gray-700 hover:text-green-600 transition-colors">Benefits</a>
+              <a href="#packages" className="text-gray-700 hover:text-green-600 transition-colors">Packages</a>
               <a href="#ingredients" className="text-gray-700 hover:text-green-600 transition-colors">Ingredients</a>
               <a href="#testimonials" className="text-gray-700 hover:text-green-600 transition-colors">Reviews</a>
+              <a href="#faq" className="text-gray-700 hover:text-green-600 transition-colors">FAQs</a>
               <a href="tel:+923215445474" className="flex items-center text-green-600 font-medium">
                 <Phone className="w-4 h-4 mr-2" />
                 <span className="hidden lg:inline">+92 321 5445474</span>
               </a>
             </div>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <Menu className="w-5 h-5" />
-            </Button>
+            <details className="relative md:hidden">
+              <summary aria-label="Open navigation" className="cursor-pointer list-none rounded-lg border border-green-200 p-2"><Menu className="h-5 w-5" /></summary>
+              <nav aria-label="Mobile navigation" className="absolute right-0 top-12 flex w-48 flex-col gap-4 rounded-xl border border-green-100 bg-white p-5 shadow-xl">
+                <a href="#packages">Packages</a><a href="#benefits">Benefits</a><a href="#ingredients">Ingredients</a><a href="#testimonials">Reviews</a><a href="#faq">FAQs</a>
+                <a href={orderLink} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-700">Order now</a>
+              </nav>
+            </details>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 via-emerald-500/5 to-yellow-400/10"></div>
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-br from-green-600/10 via-emerald-500/5 to-yellow-400/10"></div>
         <div className="w-full px-4 py-16 lg:py-24">
           <div className="flex flex-col lg:flex-row  items-center   gap-12">
 
@@ -48,16 +58,16 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity -z-10"></div>
                 <div className="relative bg-green-100 rounded-3xl p-8 shadow-2xl w-full">
                   <Image
-                    src="/slimleaf.png"
+                    src={store.product.image}
                     alt="SlimLeaf Organic Tea"
                     width={400}
                     height={400}
                     className="rounded-2xl shadow-lg w-full h-auto bg-green-300"
                     priority
                   />
-                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse z-20">
-                    -33% OFF
-                  </div>
+                  {savings > 0 && <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 text-sm font-bold rounded-full shadow-lg animate-pulse z-20">
+                    -{discountPercent}% OFF
+                  </div>}
                   <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-lg z-20">
                     ✨ Premium Quality
                   </div>
@@ -69,7 +79,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Award className="w-4 h-4 mr-2" />
-                #1 Organic Tea in Pakistan
+                A daily moment of wellness
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -99,29 +109,23 @@ export default function Home() {
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Users className="w-5 h-5 text-green-500" />
-                  <span>1000+ Happy Customers</span>
+                  <a href="#testimonials" className="underline underline-offset-4">Customer Reviews</a>
                 </div>
               </div>
 
               {/* Pricing */}
               <div className="bg-white rounded-2xl p-6 shadow-xl mb-8 border border-green-100">
-                <div className="flex items-center justify-center lg:justify-start space-x-4 mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-600">(500+ Reviews)</span>
-                </div>
+                <a href="#testimonials" className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-green-700"><MessageCircle className="h-4 w-4" /> Read customer reviews</a>
 
-                <div className="flex items-center justify-center lg:justify-start space-x-4">
-                  <span className="text-2xl text-gray-400 line-through">Rs. 2,999</span>
-                  <span className="text-4xl lg:text-5xl font-bold text-green-600">Rs. 1,999</span>
-                  <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">
-                    Save Rs. 1,000
-                  </span>
+                <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                  {savings > 0 && <span className="text-2xl text-gray-400 line-through">{formatPrice(store.product.compareAtPrice)}</span>}
+                  <span className="text-4xl lg:text-5xl font-bold text-green-600">{formatPrice(store.product.price)}</span>
+                  {savings > 0 && <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">
+                    Save {formatPrice(savings)}
+                  </span>}
                 </div>
-                <p className="text-gray-600 mt-2">125g Premium Pack • 70-80 Servings</p>
+                <p className="text-gray-600 mt-2">{store.product.packLabel}</p>
+                <a href="#packages" className="mt-3 inline-block font-medium text-green-700 underline underline-offset-4">Explore 1, 2 &amp; 3 pack offers</a>
               </div>
 
               {/* CTA Buttons */}
@@ -132,7 +136,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-6 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   <a
-                    href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea%20for%20Rs.%201999"
+                    href={orderLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center"
@@ -158,6 +162,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Packages />
 
       {/* Benefits Section */}
       <section id="benefits" className="py-16 lg:py-24 bg-white">
@@ -196,8 +202,8 @@ export default function Home() {
               },
               {
                 icon: <Users className="w-8 h-8 text-green-500" />,
-                title: "Trusted by Thousands",
-                description: "Join 1000+ satisfied customers who've transformed their wellness"
+                title: "Customer Experiences",
+                description: "Read feedback and conversations shared by our tea community"
               },
               {
                 icon: <Sparkles className="w-8 h-8 text-green-500" />,
@@ -298,59 +304,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-              What Our Customers Say
-            </h2>
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="flex text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-current" />
-                ))}
-              </div>
-              <span className="text-lg font-semibold text-gray-700">4.9/5 Rating</span>
-              <span className="text-gray-500">(500+ Reviews)</span>
-            </div>
-          </div>
+      <Reviews reviews={store.reviews} feedbackLink={whatsappLink("Hello! I would like to share my experience with SlimLeaf Tea.")} />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah Ahmed",
-                location: "Karachi",
-                rating: 5,
-                text: "Amazing results in just 3 weeks! I feel more energetic and my clothes fit better. Highly recommended!"
-              },
-              {
-                name: "Ali Hassan",
-                location: "Lahore",
-                rating: 5,
-                text: "The taste is actually really good, and I&apos;ve noticed significant improvement in my digestion and energy levels."
-              },
-              {
-                name: "Fatima Khan",
-                location: "Islamabad",
-                rating: 5,
-                text: "Best organic tea I&apos;ve tried! Natural ingredients and real results. Worth every penny."
-              }
-            ].map((review, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex text-yellow-400 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-4 italic">&ldquo;{review.text}&rdquo;</p>
-                  <div className="border-t pt-4">
-                    <p className="font-semibold text-gray-900">{review.name}</p>
-                    <p className="text-sm text-gray-500">{review.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
+      <section id="faq" className="scroll-mt-24 bg-green-50 py-16">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">A little more about SlimLeaf</h2>
+          <div className="space-y-3">
+            {store.faqs.map((faq) => (
+              <details key={faq.question} className="rounded-2xl border border-green-100 bg-white p-5">
+                <summary className="cursor-pointer font-semibold text-gray-900">{faq.question}</summary>
+                <p className="mt-3 leading-relaxed text-gray-600">{faq.answer === "price" ? `${store.packages.map((offer) => `${offer.quantity} ${offer.quantity === 1 ? "pack" : "packs"}: ${formatPrice(packagePrice(offer))}`).join("; ")}. ${store.packageBenefits.join(" and ")} included. Contact us on WhatsApp to confirm availability.` : faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>
@@ -363,7 +327,7 @@ export default function Home() {
             Ready to Start Your Wellness Journey?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers and transform your wellness journey today!
+            Make room for a calming cup in your daily routine. Message us to place your order.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -373,8 +337,9 @@ export default function Home() {
               className="bg-white text-green-600 hover:bg-gray-100 px-10 py-6 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
               <a
-                href="https://wa.me/923215445474?text=Hello!%20I%20want%20to%20order%20SlimLeaf%20Tea%20for%20Rs.%201999"
+                href={orderLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
                 <MessageCircle className="mr-3 h-6 w-6" />
@@ -383,8 +348,8 @@ export default function Home() {
             </Button>
 
             <div className="text-white">
-              <div className="text-3xl font-bold">Rs. 1,999</div>
-              <div className="text-green-200 line-through text-lg">Rs. 2,999</div>
+              <div className="text-3xl font-bold">{formatPrice(store.product.price)}</div>
+              {savings > 0 && <div className="text-green-200 line-through text-lg">{formatPrice(store.product.compareAtPrice)}</div>}
             </div>
           </div>
         </div>
@@ -426,6 +391,7 @@ export default function Home() {
                   <a
                     href="https://wa.me/923215445474"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-green-400 transition-colors"
                   >
                     WhatsApp Chat
@@ -452,7 +418,7 @@ export default function Home() {
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © 2025 SlimLeaf Tea. All rights reserved.
+              © {new Date().getFullYear()} SlimLeaf Tea. All rights reserved.
             </p>
           </div>
         </div>

@@ -61,6 +61,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **WhatsApp**: Available for direct orders
 - **Location**: Faisalabad, Pakistan
 
+## Updating prices and customer reviews
+
+Edit `content/store.json` to change the price, product image, review screenshots and FAQs. See [CONTENT-UPDATES.md](./CONTENT-UPDATES.md) for examples and instructions for publishing updates to a deployed site.
+
+The review gallery uses customer screenshots from `public`; feedback is collected through WhatsApp and published by the owner.
+
 ## 🚀 Deployment
 
 This project is optimized for deployment on Vercel, Netlify, or any other modern hosting platform that supports Next.js.
